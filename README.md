@@ -4,9 +4,11 @@ Welcome and thanks for checking out my project. This application will scrape dat
 ## Installation
 run the following commands\
 => git clone https://github.com/ricardo39985/stock_scraper.git\
+=> bundle install
 Then do:\
 cd stock_scraper\
 cd bin\
+./main
 
 
 
