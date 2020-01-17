@@ -14,8 +14,8 @@ Y88bo.      .o888oo  .ooooo.   .ooooo.   888  oooo     Y88bo.       .ooooo.  ooo
      `"Y88b   888   888   888 888        888888.            `"Y88b 888        888      .oP"888   888   888 888ooo888  888
 oo     .d8P   888 . 888   888 888   .o8  888 `88b.     oo     .d8P 888   .o8  888     d8(  888   888   888 888    .o  888
 8""88888P'    "888" `Y8bod8P' `Y8bod8P' o888o o888o    8""88888P'  `Y8bod8P' d888b    `Y888""8o  888bod8P' `Y8bod8P' d888b
-                                                                                                 888
-                                                                                                o888o                      }
+          By Ricardo Persaud                                                                     888
+          https://github.com/ricardo39985/stock_scraper                                         o888o                      }
   end
   def self.main_menu
     "_____ _             _      _____
@@ -24,8 +24,8 @@ oo     .d8P   888 . 888   888 888   .o8  888 `88b.     oo     .d8P 888   .o8  88
  `--. \ __/ _ \ / __| |/ /  `--. \/ __| '__/ _` | '_ \ / _ \ '__|
 /\__/ / || (_) | (__|   <  /\__/ / (__| | | (_| | |_) |  __/ |
 \____/ \__\___/ \___|_|\_\ \____/ \___|_|  \__,_| .__/ \___|_|
-                                                | |
-                                                |_|   "
+  By Ricardo Persaud                            | |
+  https://github.com/ricardo39985/stock_scraper |_|   "
 
   end
 

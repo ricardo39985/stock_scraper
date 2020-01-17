@@ -27,8 +27,9 @@ class Scraper
 
   def self.import(pages=1)
     counters
+    stock_counter = 1
     while @page_counter <= pages#Goes through each page on the site
-      stock_counter = 1
+
       k =pages.to_i
       k+=1
       k*=25
