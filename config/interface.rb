@@ -58,8 +58,10 @@ class RunScrape
   def sort
     puts `clear`
     puts Url.main_menu
-    sort_select = nil
+    sort_select = true
     while sort_select
+      puts "1. Sort by Name\n2. Sort by price\n3. Sort by symbol"
+      sort_select =gets.chomp
       case sort_select
       when '1'
         Stock.all.sort_by {|obj| obj.company}.each { |e| puts "Company: #{e.company} - Price: $#{e.price}" }
