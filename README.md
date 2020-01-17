@@ -6,16 +6,16 @@ run the following commands\
 => git clone https://github.com/ricardo39985/stock_scraper.git\  
 => bundle install\
 Then do:\
-cd stock_scraper\
-cd bin\
-./main
+=> cd stock_scraper\
+=> cd bin\
+=> ./main
 
 
 
 
 ## Usage
 To run do:\
-./main\
+=> ./main\
 Fist option is to enter the pages to scrape. This is time consuming so keep that in mind.\
 All options provide will be for the stocks after initial scrape
 ![image](https://user-images.githubusercontent.com/56775968/72629542-8916db00-391e-11ea-8b98-08cc6175be2a.png)
