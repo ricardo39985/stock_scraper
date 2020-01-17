@@ -58,16 +58,16 @@ class RunScrape
     puts `clear`
     puts Url.main_menu
     sort_select = gets.chomp
-    case sort_select
-    when '1'
-      Stock.all.sort_by {|obj| obj.company}.each { |e| puts "Company: #{e.company} - Price: $#{e.price}" }
-    when '2'
-      Stock.all.sort_by {|obj| obj.price}.each { |e| puts "Company: #{e.company} - Price: $#{e.price}"  }
-    when '3'
-      Stock.all.sort_by {|obj| obj.symbol}.each { |e| puts "Company: #{e.company} - Price: $#{e.price}"  }
-    else
-     input = nil
-    end
+      case sort_select
+      when '1'
+        Stock.all.sort_by {|obj| obj.company}.each { |e| puts "Company: #{e.company} - Price: $#{e.price}" }
+      when '2'
+        Stock.all.sort_by {|obj| obj.price}.each { |e| puts "Company: #{e.company} - Price: $#{e.price}"  }
+      when '3'
+        Stock.all.sort_by {|obj| obj.symbol}.each { |e| puts "Company: #{e.company} - Price: $#{e.price}"  }
+      else
+
+      end
   end
 
   def intro_timer(timer = 12)
