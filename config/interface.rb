@@ -58,7 +58,8 @@ class RunScrape
   def sort
     puts `clear`
     puts Url.main_menu
-    sort_select = gets.chomp
+    sort_select = nil
+    while sort_select
       case sort_select
       when '1'
         Stock.all.sort_by {|obj| obj.company}.each { |e| puts "Company: #{e.company} - Price: $#{e.price}" }
@@ -67,8 +68,13 @@ class RunScrape
       when '3'
         Stock.all.sort_by {|obj| obj.symbol}.each { |e| puts "Company: #{e.company} - Price: $#{e.price}"  }
       else
+        "Invalid input. Returning to main menu"
+        sort_select = false
 
       end
+
+    end
+
   end
 
   def intro_timer(timer = 12)
