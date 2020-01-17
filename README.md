@@ -14,6 +14,8 @@ cd bin
 ## Usage
 To run do:
 ./main
+Fist option is to enter the pages to scrape. This time consuming so keep that in mind.
+![image](https://user-images.githubusercontent.com/56775968/72629542-8916db00-391e-11ea-8b98-08cc6175be2a.png)
 
 
 ## Contributing
