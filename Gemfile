@@ -4,3 +4,4 @@ source "https://rubygems.org"
 gem "nokogiri"
 gem "launchy"
 gem 'colorize'
+gem 'pry'
