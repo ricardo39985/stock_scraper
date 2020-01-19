@@ -32,11 +32,11 @@ class Scraper
       parsed = Nokogiri::HTML(current_page)
       parsed.css("tbody tr").each do |stock| # Assigns the attribute for each listing on the page in a hash. Each pass of this
         print `clear`
-        puts "************************".colorize(:blue)
+        puts "************************".colorize(String.colors[rand(16)])
         puts "\t#{stock_counter}/#{k}".colorize(:blue)
-        puts "-#{'-'*((stock_counter.to_f/k.to_f)*22.5)}".colorize(:blue)
+        puts "▓#{'▓'*((stock_counter.to_f/k.to_f)*23)}".colorize(:blue)
         puts "\t#{((stock_counter.to_f/k.to_f)*100).to_i}%".colorize(:blue)
-        puts "************************".colorize(:blue)
+        puts "************************".colorize(String.colors[rand(16)])
         stock_att = {                      #will create one complete stock hash which will be added to the stocks array
           symbol: stock.css("td a")[0].text,
           company: stock.css(" a")[1].text,
@@ -56,8 +56,6 @@ class Scraper
             raise e
           end
         end
-          # stk = Nokogiri::HTML(open('https://finviz.com/search.ashx?p=AEYE'))
-          # stock_att[:bio] = Nokogiri::HTML(open('https://finviz.com/quote.ashx?t='+"#{stock_att[:symbol]}")).css("td.fullview-profile").text.gsub(". ", ".\n")
           @stocks << stock_att
           stock_counter+=1
         end

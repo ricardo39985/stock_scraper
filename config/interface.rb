@@ -7,7 +7,7 @@ class RunScrape
     pages
     stocks(@pages_to_scrape)
     while input != 'exit'
-      puts Url.main_menu.colorize(:blue)
+      puts Url.main_menu.colorize(String.colors[rand(16)])
       puts "**************************************\n".colorize(:blue)+"Below is a list of available commands \n"+"***************************************\n".colorize(:blue)
       puts "1- List of Companies\n2. Search\n3. Sort\n4. View Random Stock\nType 'exit' to quit program"
       input = gets.chomp
@@ -26,7 +26,8 @@ class RunScrape
   end
 
   def welcome
-    puts Url.logo.colorize(:blue)
+    print `clear`
+    puts Url.logo.colorize(String.colors[rand(16)])
     sleep 3
     puts"Welcome to my Scraper!\nIt scrapes stock data and provides access to the latest news"
     intro_timer
@@ -39,11 +40,11 @@ class RunScrape
 
 
   def intro_timer(timer = 12)
-    s = "o"
+    s = "▓"
     timer.downto(0) do |i|
       colors = String.colors
       print s
-      s+="o".colorize(colors[rand(16)])
+      s+="▓".colorize(colors[rand(16)])
       sleep 0.2
     end
   end
