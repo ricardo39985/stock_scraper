@@ -6,17 +6,17 @@ Welcome and thanks for checking out my project. This application will scrape dat
 
 ## Installation
 
-run the following commands\
+run the following commands  
 
-=> git clone https://github.com/ricardo39985/stock_scraper.git\   
+=> git clone https://github.com/ricardo39985/stock_scraper.git     
 
-=> bundle install\
+=> bundle install  
 
-Then do:\
+Then do:  
 
-=> cd stock_scraper\
+=> cd stock_scraper  
 
-=> cd bin\
+=> cd bin  
 
 => ./main
 
@@ -30,11 +30,11 @@ Then do:\
 
 ## Usage
 
-To run do:\
+To run do:  
 
-=> ./main\
+=> ./main  
 
-First option is to enter the pages to scrape. This is time consuming so keep that in mind.\
+First option is to enter the pages to scrape. This is time consuming so keep that in mind.  
 
 All options provide will be for the stocks after an initial scrape
 
@@ -42,13 +42,11 @@ All options provide will be for the stocks after an initial scrape
 
 
 
-Choose an option from the main menu\
+Choose an option from the main menu  
 
 ![menu](https://user-images.githubusercontent.com/56775968/72630127-af894600-391f-11ea-91d2-e4060c2f6f99.png)
 
-\
-
-The sort options provide a few options for sorting\
+The sort options provide a few options for sorting  
 
 ![sort](https://user-images.githubusercontent.com/56775968/72630315-13137380-3920-11ea-8453-9615428710a9.png)
 
@@ -69,7 +67,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/ricard
 ## License
 
 
-
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 
@@ -79,5 +76,3 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 
 Everyone interacting in the Stock Scraper project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/ricardo39985/stock_scraper/blob/master/CODE_OF_CONDUCT.md).
-
- 
