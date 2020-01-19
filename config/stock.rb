@@ -30,7 +30,7 @@ class Stock
   end
   def self.find_stock_by_ticker(ticker="")
     puts `clear`
-    puts "This options searches from list of alread scraped stocks"
+    puts "This options searches from list of already scraped stocks"
     puts "Please enter the ticker :"
     ticker = gets.chomp
     match = Stock.all.detect { |stock|stock.symbol == ticker.upcase  }
