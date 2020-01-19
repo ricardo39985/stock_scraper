@@ -9,7 +9,7 @@ class RunScrape
     while input != 'exit'
       puts Url.main_menu.colorize(:blue)
       puts "**************************************\n".colorize(:blue)+"Below is a list of available commands \n"+"***************************************\n".colorize(:blue)
-      puts "1- List of Companies\n2. Search\n3. Sort\n4. View Random Stock"
+      puts "1- List of Companies\n2. Search\n3. Sort\n4. View Random Stock\nType 'exit' to quit program"
       input = gets.chomp
       case input
       when '1'
