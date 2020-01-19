@@ -45,8 +45,8 @@ class Stock
   def self.sort
     sort_option = nil
     puts `clear`
-    while sort_option != '4'
-      puts "1. Sort by Name\n2. Sort by price\n3. Sort by symbol\n4 for main menu"
+    while not ['1','2','3','4'].any?(sort_option)
+      puts "1. Sort by Name\n2. Sort by price\n3. Sort by symbol\n4. Main menu"
       sort_option =gets.chomp
       case sort_option
       when '1'
@@ -55,6 +55,8 @@ class Stock
         Stock.all.sort_by {|obj| obj.price.to_f}.each { |e| puts "Company: #{e.company} - Price: $#{e.price}"  }
       when '3'
         Stock.all.sort_by {|obj| obj.symbol}.each { |e| puts "Company: #{e.company} - Price: $#{e.price}"  }
+      when '4'
+        break
       else
         puts "Please enter a valid option."
       end
