@@ -24,6 +24,7 @@ class RunScrape
     end
     exit_m
   end
+
   def welcome
     puts Url.logo.colorize(:blue)
     sleep 3
@@ -46,6 +47,7 @@ class RunScrape
       sleep 0.2
     end
   end
+
   def exit_m
     puts Url.logo.colorize(:blue)
     puts "Thanks for checking out my work.\nI welcome your feedback!"
