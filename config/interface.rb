@@ -60,7 +60,7 @@ class RunScrape
       print`clear`
       puts "There are currently #{Scraper.max_page} pages to scrape.\nHow many pages would you like scrape?"
       @pages_to_scrape = gets.chomp
-      @seconds_to_scrape = @pages_to_scrape.to_i*17
+      @seconds_to_scrape = @pages_to_scrape.to_i*21
       while @pages_to_scrape.match(/\D/) || @pages_to_scrape.to_i > Scraper.max_page || @pages_to_scrape.to_i< 0
         puts "Please enter a number between 1 and #{Scraper.max_page}"
         @pages_to_scrape = gets.chomp
