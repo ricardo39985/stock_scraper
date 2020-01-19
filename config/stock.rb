@@ -11,9 +11,8 @@ class Stock
   end
 
   def self.import(mega_array)
-    mega_array.each do |l|
-      Stock.new(l)
-      # binding.pry
+    mega_array.each do |hash|
+      Stock.new(hash)
     end
   end
   def self.list_stocks
