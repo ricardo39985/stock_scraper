@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
-require_relative '../config/interface.rb'
+require_relative '../lib/stock_scraper.rb'
 
 RunScrape.new

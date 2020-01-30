@@ -1,11 +1,16 @@
-require_relative 'scraper.rb'
+
 
 class RunScrape
   def initialize
     welcome
-    input = ''
     pages
     stocks(@pages_to_scrape)
+    main_loop
+    exit_screen
+  end
+
+  def main_loop
+    input = ''
     while input != 'exit'
       puts Url.main_menu.colorize(String.colors[rand(16)])
       puts "**************************************\n".colorize(:blue)+"Below is a list of available commands \n"+"***************************************\n".colorize(:blue)
@@ -13,16 +18,31 @@ class RunScrape
       input = gets.chomp
       case input
       when '1'
-        Stock.list_stocks
+        list_stocks
       when '2'
-        Stock.find_stock_by_ticker
+        find_stock_by_ticker
       when '3'
-        Stock.sort
+        sort
       when '4'
-        Stock.rand_stock
+        rand_stock
       end
     end
-    exit_m
+    
+  end
+
+  def find_stock_by_ticker(ticker="")
+    puts `clear`
+    puts "This options searches from list of already scraped stocks"
+    puts "Please enter the ticker :"
+    ticker = gets.chomp
+    match = Stock.all.detect { |stock|stock.symbol == ticker.upcase  }
+    if match
+      print `clear`
+      puts "Company   "+match.company, "Ticker   "+match.symbol, "Price   "+match.price, "Volume   "+match.volume, "Percent Change   "+match.percent_change, "News  "+match.news, "Bio "+match.bio
+    else
+      puts "Sorry, that stock was not found in the database"
+    end
+    input = nil
   end
 
   def welcome
@@ -49,12 +69,13 @@ class RunScrape
     end
   end
 
-  def exit_m
+  def exit_screen
     puts Url.logo.colorize(:blue)
     puts "Thanks for checking out my work.\nI welcome your feedback!"
     intro_timer(12)
     puts "\n"
   end
+
   def pages
     response = 0
     while response != '1'
@@ -79,4 +100,37 @@ class RunScrape
     @pages_to_scrape-=1
     @pages_to_scrape
   end
+
+  def sort
+    sort_option = nil
+    puts `clear`
+    while not ['1','2','3','4'].any?(sort_option)
+      puts "1. Sort by Name\n2. Sort by price\n3. Sort by symbol\n4. Main menu"
+      sort_option =gets.chomp
+      case sort_option
+      when '1'
+        Stock.all.sort_by {|obj| obj.company}.each { |e| puts "Company: #{e.company} - Price: $#{e.price}" }
+      when '2'
+        Stock.all.sort_by {|obj| obj.price.to_f}.each { |e| puts "Company: #{e.company} - Price: $#{e.price}"  }
+      when '3'
+        Stock.all.sort_by {|obj| obj.symbol}.each { |e| puts "Company: #{e.company} - Price: $#{e.price}"  }
+      when '4'
+        break
+      else
+        puts "Please enter a valid option."
+      end
+    end
+  end
+
+  def rand_stock
+    puts `clear`
+    match = Stock.all[rand(Stock.all.size)]
+    puts "Company =>   "+match.company, "Ticker =>   "+match.symbol, "Price =>   "+match.price, "Volume =>   "+match.volume, "Percent Change =>   "+match.percent_change, "News =>  "+match.news, "Bio:\n "+match.bio
+  end
+
+  def list_stocks
+    Stock.all.each_with_index {|s, i| puts"#{i+1}. #{s.company}"}
+    nil
+  end
+
 end
